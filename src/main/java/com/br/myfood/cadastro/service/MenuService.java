@@ -28,7 +28,7 @@ public class MenuService {
 		
 		if(restourante.isPresent()) {
 			Menu menu = Menu.create(menuDto);
-			menu.setRestaurante(menuDto.getRestaurante());
+			menu.setRestaurante(restourante.get());
 			return menuRepository.save(menu);
 		}else {
 			return null;
